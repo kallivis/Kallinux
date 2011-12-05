@@ -1,0 +1,19 @@
+[user]
+    name = Cody McCarthy
+    email = cody@colibri-software.com
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+[core]
+    editor = vim
+[alias]
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    vimdiff = difftool -t vimdiff
+    gvimdiff = difftool -t gvimdiff
+    kompare = difftool -t kompare
+[branch "master"]
+    mergeoptions = --no-ff
