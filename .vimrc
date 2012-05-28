@@ -1,4 +1,5 @@
 let mapleader=","
+
 set expandtab
 set tabstop=4
 set smarttab
@@ -53,8 +54,8 @@ inoremap /* /*/ki<End>
 iab jmain public static void main(String[] args)<CR>{o}<Up>A
 
 
-set directory=/home/kall/tmp/.vim
-set backupdir=/home/kall/tmp/.vim
+set directory=~/tmp/.vim
+set backupdir=~/tmp/.vim
 
 set completeopt=menuone,preview,longest
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif

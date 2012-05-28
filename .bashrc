@@ -28,14 +28,13 @@ if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# set a fancy prompt (non-color, unless we know we "want" color)
+
 case "$TERM" in
     xterm-color) color_prompt=yes;;
 esac
-
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
+# should be on the output of :${PATH}:$COLIBRI_HOME/hummingbird_etc/scriptscommands, not on the prompt
 #force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
@@ -69,8 +68,8 @@ esac
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -105,19 +104,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 # Customize environment
-export HUMMINGBIRD_HOME='/home/alex/hummingbird_old'
-export COLIBRI_HOME='/home/kall/Colibri'
-export CH=$COLIBRI_HOME
 #export PATH=${PATH}:`gem environment gemdir`/bin:/home/alex/bin:$COLIBRI_HOME/hummingbird_etc/scripts:/home/alex/scripts:${HUMMINGBIRD_HOME}/bin:/usr/NX/bin:.
-export PATH=${HOME}/bin:${PATH}:$COLIBRI_HOME/hummingbird_etc/scripts:. 
+export PATH=${HOME}/bin:${PATH}:. # Add RVM to PATH for scripting. 
 export EDITOR=vim
 export PAGER=less
-PS1="`whoami`@`hostname`:$ "
-#export SCRIPTS_DIR=/home/alex/scripts
-export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$JAVA_HOME/jre/lib/i386:$JAVA_HOME/jre/lib/i386/client
-export CS=colibri-software.com
+export PS1="`whoami`@`hostname`:$ "
 
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 fi

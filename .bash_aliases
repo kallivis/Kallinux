@@ -12,6 +12,7 @@ alias cp='cp --preserve=mode,timestamps'
 alias pg='sudo -u postgres'
 alias t='task tom | grep `pwd`'
 alias cdg='cd ~/Dropbox/Year3/FallSem/comp3553\(Graphics\)/'
+alias rvm2='rvm use 1.9.2-p290'
 complete -F _aptitude -o default ap
 complete -F _root_command -o default pg
 
