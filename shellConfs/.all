@@ -1,0 +1,8 @@
+#!/bin/sh
+for f in ~/shellConfs/.*
+do
+    if [ "${f}" != "${HOME}/shellConfs/.all" -a "${f}" != "${HOME}/shellConfs/." -a "${f}" != "${HOME}/shellConfs/.." ]
+    then
+       source ${f}
+    fi
+done

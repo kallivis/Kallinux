@@ -1,0 +1,37 @@
+#! /bin/sh
+if [[ $myShell == '/bin/zsh' ]]
+then
+# Zsh settings for history
+export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
+export HISTSIZE=25000
+export HISTFILE=~/.zsh_history
+export SAVEHIST=10000
+setopt INC_APPEND_HISTORY
+setopt extended_history
+setopt hist_expire_dups_first
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
+setopt share_history # share command history data
+setopt append_history
+
+
+else 
+if [[ $myShell == '/bin/bash' ]]
+then 
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+HISTFILE=~/.bash_history
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=1000
+HISTFILESIZE=2000
+
+fi
+fi
+
+

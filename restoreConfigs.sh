@@ -1,8 +1,9 @@
-#!/bin/bash
+#!/bin/zsh
 mkdir -p ~/tmp
 mkdir -p ~/tmp/.vim/
-mkdir -p .git
+mkdir -p ~/.git
 mkdir -p ~/.kde/share/apps
+rm -rf ~/.kde/share/apps/konsole/
 ln -s -f ~/mySync/.bash_aliases ~/.bash_aliases
 ln -s -f ~/mySync/.bash_logout ~/.bash_logout
 ln -s -f ~/mySync/.bash_profile ~/.bash_profile
@@ -18,6 +19,5 @@ ln -s -f ~/mySync/.zshenv ~/.zshenv
 ln -s -f ~/mySync/.tmux.conf ~/.tmux.conf
 ln -s -f ~/mySync/konsole/ ~/.kde/share/apps
 ln -s -f ~/mySync/.oh-my-zsh/ ~/
-source ~/.bashrc
+ln -s -f ~/mySync/shellConfs/ ~/
 source ~/.zshrc
-

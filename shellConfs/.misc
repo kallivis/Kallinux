@@ -1,0 +1,53 @@
+#!/bin/sh
+# Set less options
+if [[ -x $(which less) ]]
+then
+    export PAGER="less"
+    export LESS="--ignore-case --LONG-PROMPT --QUIET --chop-long-lines -Sm --RAW-CONTROL-CHARS --quit-if-one-screen --no-init"
+    if [[ -x $(which lesspipe.sh) ]]
+    then
+	LESSOPEN="| lesspipe.sh %s"
+	export LESSOPEN
+    fi
+fi
+
+# Set default editor
+if [[ -x $(which vim) ]]
+then
+    export EDITOR="vim"
+    export USE_EDITOR=$EDITOR
+    export VISUAL=$EDITOR
+fi
+
+# Say how long a command took, if it took more than 30 seconds
+export REPORTTIME=30
+# Watch other user login/out
+watch=notme
+export LOGCHECK=60
+
+if [[ $myShell == '/bin/zsh' ]]
+then
+
+# Zsh spelling correction options
+#setopt CORRECT
+#setopt DVORAK
+
+# Prompts for confirmation after 'rm *' etc
+# Helps avoid mistakes like 'rm * o' when 'rm *.o' was intended
+setopt RM_STAR_WAIT
+
+# Background processes aren't killed on exit of shell
+setopt AUTO_CONTINUE
+
+# Don’t write over existing files with >, use >! instead
+setopt NOCLOBBER
+
+# Don’t nice background processes
+setopt NO_BG_NICE
+
+setopt interactivecomments
+fi
+export PATH=${HOME}/bin:${PATH}:. # Add RVM to PATH for scripting. 
+PATH=$PATH:$HOME/.rvm/bin # Add iVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+

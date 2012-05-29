@@ -32,6 +32,7 @@ ZSH_THEME="cody"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-
+export myShell='/bin/zsh'
+source ${HOME}/shellConfs/.all
 # Customize to your needs...
-export PATH=/home/cody/.rvm/gems/ruby-1.9.3-p194/bin:/home/cody/.rvm/gems/ruby-1.9.3-p194@global/bin:/home/cody/.rvm/rubies/ruby-1.9.3-p194/bin:/home/cody/.rvm/bin:/home/cody/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/home/cody/.rvm/bin
+

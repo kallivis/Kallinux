@@ -1,0 +1,144 @@
+#! /bin/sh
+alias al='vim ~/shellConfs/.aliases ; . ~/shellConfs/.aliases'
+# Push and pop directories on directory stack
+alias pu='pushd'
+alias po='popd'
+
+# Basic directory operations
+alias ...='cd ../..'
+alias -- -='cd -'
+
+# Super user
+alias _='sudo'
+
+#alias g='grep -in'
+
+# Show history
+alias history='fc -l 1'
+
+# List direcory contents
+alias lsa='ls -lah'
+alias la='ls -A'
+alias l='ls -la'
+alias ll='ls -l'
+alias lq='ls -Q'
+alias lr='ls -R'
+alias lrs='ls -lrS'
+alias lrt='ls -lrt'
+alias lrta='ls -lrtA'
+alias lrth='ls -lrth'
+alias lrtha='ls -lrthA'
+
+alias sl=ls # often screw this up
+
+alias afind='ack-grep -il'
+
+alias j='jobs -l'
+alias kw='kwrite'
+alias tf='tail -f'
+alias grep='grep --colour'
+alias vnice='nice -n 20 ionice -c 3'
+alias get_iplayer='get_iplayer --nopurge'
+alias tree="tree -A -I 'CVS|*~'"
+alias rvm2="rvm use 1.9.2-p290"
+alias hyena='ssh cody@hyena.colibri-software.com'
+alias hermes='ssh cody@hermes.colibri-software.com'
+alias RH='gnome-open ~/Downloads/robot_house.png'
+
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+# Play safe!
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+
+# For convenience
+alias mkdir='mkdir -p'
+alias dus='du -ms * | sort -n'
+
+# Typing errors...
+alias cd..='cd ..'
+
+# PDF viewer (just type 'file.pdf')
+if [[ $myShell == '/bin/zsh' ]]
+then
+    if [[ -x `which kpdf` ]]; then
+        alias -s pdf='kfmclient exec'
+    else
+        if [[ -x `which gpdf` ]]; then
+            alias -s pdf='gpdf'
+        else
+            if [[ -x `which evince` ]]; then
+                alias -s pdf='evince'
+            fi
+        fi
+    fi
+    # Global aliases (expand whatever their position)
+    #  e.g. find . E L
+    alias -g L='| less'
+    alias -g H='| head'
+    alias -g S='| sort'
+    alias -g T='| tail'
+    alias -g N='> /dev/null'
+    alias -g E='2> /dev/null'
+fi
+
+# Automatically background processes (no output to terminal etc)
+alias z='echo $RANDOM > /dev/null; zz'
+zz () {
+    echo $*
+    $* &> "/tmp/z-${1:gs/\//_}-$RANDOM" &!
+}
+
+# Aliases to use this
+# Use e.g. 'command gv' to avoid
+for i in acroread akregator amarok ario chromium-browser easytag eclipse firefox gaim gimp gpdf gv \
+    gwenview k3b kate kmail konqueror kontact kopete kpdf kwrite okular oobase oocalc ooffice oowriter \
+    opera pan thunderbird; do
+    alias "$i=z $i"
+done
+alias "lo=z libreoffice"
+
+# Quick find
+f() {
+    echo "find . -iname \"*$1*\""
+    find . -iname "*$1*"
+}
+
+alias cdr='rr=`findroot` ; [ z$rr != z ] && cd $rr'
+
+# git stuff
+alias ci='git commit'
+alias co='git checkout'
+alias st='git status'
+alias rb='git rebase'
+alias dci='git svn dcommit'
+alias srb='git svn rebase'
+alias br='git branch'
+alias log='git log --oneline --graph --branches --decorate'
+alias gk='gitk --all'
+alias ga='git add'
+alias pa='ga --patch'
+alias a.='ga .'
+alias gd='git diff'
+alias gdc='gd --cached'
+alias gs='git stash'
+alias gsa='gs apply'
+alias gsk='gs -k'
+alias gm='git merge --no-ff'
+alias gmff='git merge --ff'
+
+# git flow
+alias gf='git flow'
+alias gff='git flow feature'
+alias gfr='git flow release'
+alias gfh='git flow hotfix'
+
+alias task='ps auxw | head -n1 ; ps auxw | grep -v grep | grep'
+alias py='ipython'
+alias ap='sudo aptitude'
+alias upup='ap update && ap upgrade'
+alias h='history | grep'
+alias cp='cp --preserve=mode,timestamps'
+alias t='task tom | grep `pwd`'
+
+alias cdr='rr=`findroot` ; [ z$rr != z ] && cd $rr'
