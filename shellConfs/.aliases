@@ -44,6 +44,7 @@ alias rvm2="rvm use 1.9.2-p290"
 alias hyena='ssh cody@hyena.colibri-software.com'
 alias hermes='ssh cody@hermes.colibri-software.com'
 alias RH='gnome-open ~/Downloads/robot_house.png'
+alias go='gnome-open'
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 # Play safe!
@@ -83,20 +84,20 @@ then
 fi
 
 # Automatically background processes (no output to terminal etc)
-alias z='echo $RANDOM > /dev/null; zz'
-zz () {
-    echo $*
-    $* &> "/tmp/z-${1:gs/\//_}-$RANDOM" &!
-}
+#alias z='echo $RANDOM > /dev/null; zz'
+#zz () {
+ #   echo $*
+   # $* &> "/tmp/z-${1:gs/\//_}-$RANDOM" &!
+#}
 
 # Aliases to use this
 # Use e.g. 'command gv' to avoid
-for i in acroread akregator amarok ario chromium-browser easytag eclipse firefox gaim gimp gpdf gv \
-    gwenview k3b kate kmail konqueror kontact kopete kpdf kwrite okular oobase oocalc ooffice oowriter \
-    opera pan thunderbird; do
-    alias "$i=z $i"
-done
-alias "lo=z libreoffice"
+#for i in acroread akregator amarok ario chromium-browser easytag eclipse firefox gaim gimp gpdf gv \
+  #  gwenview k3b kate kmail konqueror kontact kopete kpdf kwrite okular oobase oocalc ooffice oowriter \
+  #  opera pan thunderbird; do
+  #  alias "$i=z $i"
+#done
+#alias "lo=z libreoffice"
 
 # Quick find
 f() {
@@ -104,7 +105,6 @@ f() {
     find . -iname "*$1*"
 }
 
-alias cdr='rr=`findroot` ; [ z$rr != z ] && cd $rr'
 
 # git stuff
 alias ci='git commit'
@@ -140,5 +140,13 @@ alias upup='ap update && ap upgrade'
 alias h='history | grep'
 alias cp='cp --preserve=mode,timestamps'
 alias t='task tom | grep `pwd`'
+function findroot()
+{
+   while [ ! -e config/environment.rb  -a  `pwd` != '/' ]
+   do
+       cd ..
+   done
 
-alias cdr='rr=`findroot` ; [ z$rr != z ] && cd $rr'
+   [ `pwd` != '/' ] && pwd
+}
+alias cdr='[ z`findroot` != z ] && cd `findroot`'

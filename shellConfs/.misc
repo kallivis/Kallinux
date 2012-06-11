@@ -47,7 +47,6 @@ setopt NO_BG_NICE
 
 setopt interactivecomments
 fi
-export PATH=${HOME}/bin:${PATH}:. # Add RVM to PATH for scripting. 
-PATH=$PATH:$HOME/.rvm/bin # Add iVM to PATH for scripting
+export PATH=${HOME}/bin:${PATH}:$HOME/.rvm/bin:. # Add RVM to PATH for scripting. 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 

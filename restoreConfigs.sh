@@ -2,8 +2,8 @@
 mkdir -p ~/tmp
 mkdir -p ~/tmp/.vim/
 mkdir -p ~/.git
-mkdir -p ~/.kde/share/apps
-rm -rf ~/.kde/share/apps/konsole/
+#mkdir -p ~/.kde/share/apps
+#rm -rf ~/.kde/share/apps/konsole/
 ln -s -f ~/mySync/.bash_aliases ~/.bash_aliases
 ln -s -f ~/mySync/.bash_logout ~/.bash_logout
 ln -s -f ~/mySync/.bash_profile ~/.bash_profile
