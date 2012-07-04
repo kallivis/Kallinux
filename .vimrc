@@ -39,6 +39,7 @@ imap <C-h> <C-w>h
 imap <C-j> <C-w>j
 imap <C-k> <C-w>k
 imap <C-l> <C-w>l
+imap destory destroy
 vmap cm <ESC>`<^I/*<ESC>`>$a*/<ESC>
 vmap :com1 <ESC>`<^I/*<ESC><C-v>j^I//<ESC><C-v>`>$a*/<ESC>
 

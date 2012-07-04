@@ -40,17 +40,25 @@ alias grep='grep --colour'
 alias vnice='nice -n 20 ionice -c 3'
 alias get_iplayer='get_iplayer --nopurge'
 alias tree="tree -A -I 'CVS|*~'"
+
 alias rvm2="rvm use 1.9.2-p290"
+alias r="rails s"
+alias rr="rails s -p 3030"
+alias rrr="rails s -p 4044"
+
 alias hyena='ssh cody@hyena.colibri-software.com'
 alias hermes='ssh cody@hermes.colibri-software.com'
+alias alba='ssh cody@albatross.colibri-software.com'
+
 alias RH='gnome-open ~/Downloads/robot_house.png'
+alias TS='gnome-open ~/Downloads/tumblr_lbt8qghn3H1qamnodo1_500.jpg'
 alias go='gnome-open'
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 # Play safe!
-alias rm='rm -i'
-alias mv='mv -i'
-alias cp='cp -i'
+#alias rm='rm -i'
+#alias mv='mv -i'
+#alias cp='cp -i'
 
 # For convenience
 alias mkdir='mkdir -p'
@@ -108,6 +116,7 @@ f() {
 
 # git stuff
 alias ci='git commit'
+alias cim='git commit -m'
 alias co='git checkout'
 alias st='git status'
 alias rb='git rebase'
@@ -119,6 +128,7 @@ alias gk='gitk --all'
 alias ga='git add'
 alias pa='ga --patch'
 alias a.='ga .'
+alias au='ga -u'
 alias gd='git diff'
 alias gdc='gd --cached'
 alias gs='git stash'
@@ -149,4 +159,35 @@ function findroot()
 
    [ `pwd` != '/' ] && pwd
 }
+function findmodel()
+{
+   while [ ! -e config/environment.rb  -a  `pwd` != '/' ]
+   do
+       cd ..
+   done
+
+cd app/models
+   [ `pwd` != '/' ] && pwd
+}
+function findview()
+{
+   while [ ! -e config/environment.rb  -a  `pwd` != '/' ]
+   do
+       cd ..
+   done
+cd app/views
+   [ `pwd` != '/' ] && pwd
+}
+function findcontroller()
+{
+   while [ ! -e config/environment.rb  -a  `pwd` != '/' ]
+   do
+       cd ..
+   done
+cd app/controllers
+   [ `pwd` != '/' ] && pwd
+}
 alias cdr='[ z`findroot` != z ] && cd `findroot`'
+alias cdm='[ z`findmodel` != z ] && cd `findmodel`'
+alias cdv='[ z`findview` != z ] && cd `findview`'
+alias cdc='[ z`findcontroller` != z ] && cd `findcontroller`'
