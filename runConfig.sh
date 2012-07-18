@@ -7,7 +7,6 @@ mkdir -p ~/.kde/share/apps
 ln -s -f ~/Kallinux/.bash_aliases ~/.bash_aliases
 ln -s -f ~/Kallinux/.bash_logout ~/.bash_logout
 ln -s -f ~/Kallinux/.bash_profile ~/.bash_profile
-ln -s -f ~/Kallinux/.bash_profile ~/.profile
 ln -s -f ~/Kallinux/.bashrc ~/.bashrc
 ln -s -f ~/Kallinux/.emacs ~/.emacs
 ln -s -f ~/Kallinux/.gitconfig ~/.gitconfig
@@ -18,7 +17,6 @@ ln -s -f ~/Kallinux/.zshrc ~/.zshrc
 ln -s -f ~/Kallinux/.zshenv ~/.zshenv
 ln -s -f ~/Kallinux/.tmux.conf ~/.tmux.conf
 ln -s -f ~/Kallinux/konsole/ ~/.kde/share/apps
-ln -s -f ~/Kallinux/.oh-my-zsh/ ~/
 ln -s -f ~/Kallinux/shellConfs/ ~/
-git clone https://github.com/kallivis/oh-my-zsh.git ~/Kallinux/.oh-my-zsh
+git clone https://github.com/kallivis/oh-my-zsh.git ~/.oh-my-zsh
 source ~/.zshrc
