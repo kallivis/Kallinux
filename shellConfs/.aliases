@@ -54,6 +54,7 @@ alias alba='ssh cody@albatross.colibri-software.com'
 
 alias RH='gnome-open ~/Downloads/robot_house.png'
 alias TS='gnome-open ~/Downloads/tumblr_lbt8qghn3H1qamnodo1_500.jpg'
+alias RL='gnome-open ~/Downloads/Adventure_Time_Princess_Bubblegum_and_Lady_Rainicorn.png'
 alias go='gnome-open'
 
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
