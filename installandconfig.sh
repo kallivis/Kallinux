@@ -1,3 +1,3 @@
 #!/bin/sh
-sudo zsh install.sh
-zsh restoreConfigs.sh
+sudo sh install.sh
+sh runConfig.sh

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 mkdir -p ~/tmp
 mkdir -p ~/tmp/.vim/
 mkdir -p ~/.git
