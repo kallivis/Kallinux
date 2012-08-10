@@ -48,9 +48,17 @@ alias rrr="rails s -p 4044"
 alias bi="bundle install"
 alias be="bundle exec"
 
-alias hyena='ssh cody@hyena.colibri-software.com'
-alias hermes='ssh cody@hermes.colibri-software.com'
-alias alba='ssh cody@albatross.colibri-software.com'
+alias colibri='colibri-software.com'
+alias hyena='hyena.colibri-software.com'
+alias hermes='hermes.colibri-software.com'
+alias alba='albatross.colibri-software.com'
+alias panther='panther.colibri-software.com'
+
+alias chyena='ssh cody@hyena.colibri-software.com'
+alias chermes='ssh cody@hermes.colibri-software.com'
+alias calba='ssh cody@albatross.colibri-software.com'
+alias cpanther='ssh cody@panther.colibri-software.com'
+
 
 alias RH='gnome-open ~/Downloads/robot_house.png'
 alias TS='gnome-open ~/Downloads/tumblr_lbt8qghn3H1qamnodo1_500.jpg'
