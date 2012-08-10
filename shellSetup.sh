@@ -21,6 +21,6 @@ ln -s -f ~/Kallinux/shellConfs/ ~/
 git clone https://github.com/kallivis/oh-my-zsh.git ~/.oh-my-zsh
 zsh
 name=`whoami`
-sudo sed -i "s/\(^${name}.*\)\/bin\/.*$/\1\/bin\/bash/" /etc/passwd
+sudo sed -i "s/\(^${name}.*\)\/bin\/.*$/\1\/bin\/zsh/" /etc/passwd
 source ~/.zshrc
 
