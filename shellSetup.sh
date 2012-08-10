@@ -19,4 +19,8 @@ ln -s -f ~/Kallinux/.tmux.conf ~/.tmux.conf
 ln -s -f ~/Kallinux/konsole/ ~/.kde/share/apps
 ln -s -f ~/Kallinux/shellConfs/ ~/
 git clone https://github.com/kallivis/oh-my-zsh.git ~/.oh-my-zsh
+zsh
+name=`whoami`
+sudo sed -i "s/\(^${name}.*\)\/bin\/.*$/\1\/bin\/bash/" /etc/passwd
 source ~/.zshrc
+
