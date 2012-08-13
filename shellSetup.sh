@@ -35,6 +35,6 @@ sed -i "s/var1/${gitname}/" ~/.gitconfig
 sed -i "s/var2/${gitemail}/" ~/.gitconfig
 zsh
 name=`whoami`
-sudo sed -i "s/\(^${name}.*\)\/bin\/.*$/\1\/bin\/bash/" /etc/passwd
+sudo sed -i "s/\(^${name}.*\)\/bin\/.*$/\1\/bin\/zsh/" /etc/passwd
 source ~/.zshrc
 
