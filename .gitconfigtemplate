@@ -1,6 +1,6 @@
 [user]
-	name = Cody McCarthy
-	email = cody@colibri-software.com
+	name = var1
+	email = var2 
 [color]
     diff = auto
     status = auto

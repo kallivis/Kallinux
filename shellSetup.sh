@@ -9,7 +9,6 @@ ln -s -f ~/Kallinux/.bash_logout ~/.bash_logout
 ln -s -f ~/Kallinux/.bash_profile ~/.bash_profile
 ln -s -f ~/Kallinux/.bashrc ~/.bashrc
 ln -s -f ~/Kallinux/.emacs ~/.emacs
-ln -s -f ~/Kallinux/.gitconfig ~/.gitconfig
 ln -s -f ~/Kallinux/.gitk ~/.gitk
 ln -s -f ~/Kallinux/.gvimrc ~/.gvimrc
 ln -s -f ~/Kallinux/.vimrc ~/.vimrc
@@ -18,7 +17,22 @@ ln -s -f ~/Kallinux/.zshenv ~/.zshenv
 ln -s -f ~/Kallinux/.tmux.conf ~/.tmux.conf
 ln -s -f ~/Kallinux/konsole/ ~/.kde/share/apps
 ln -s -f ~/Kallinux/shellConfs/ ~/
+if [ -e ~/.rvm ]
+then
+    gem install teamocil
+    ln -s -f ~/Kallinux/.teamocil ~/.teamocil
+else
+  echo "rvm not installed, skipping teamocil setup"
+fi
 git clone https://github.com/kallivis/oh-my-zsh.git ~/.oh-my-zsh
+echo "Info for .gitconfig file"
+echo "Name: "
+read gitname
+echo "Email: "
+read gitemail
+cp ~/Kallinux/.gitconfigtemplate ~/.gitconfig
+sed -i "s/var1/${gitname}/" ~/.gitconfig
+sed -i "s/var2/${gitemail}/" ~/.gitconfig
 zsh
 name=`whoami`
 sudo sed -i "s/\(^${name}.*\)\/bin\/.*$/\1\/bin\/bash/" /etc/passwd
