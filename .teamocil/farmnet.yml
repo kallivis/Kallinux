@@ -1,0 +1,32 @@
+session:
+  name: "Main Farmnet"
+  windows:
+    - name: "Server"
+      root: "~/farmnet"
+      splits:
+        - cmd: "rr"
+    - name: "Models"
+      root: "~/farmnet/app/models"
+      splits:
+        - cmd: "ls"
+    - name: "Views"
+      root: "~/farmnet/app/views"
+      splits:
+        - cmd: "ls"
+    - name: "Controllers"
+      root: "~/farmnet/app/controllers"
+      splits:
+        - cmd: "ls"
+    - name: "Console"
+      root: "~/farmnet/"
+      splits:
+        - cmd: "rails c"
+    - name: "Config"
+      root: "~/farmnet/config"
+      splits:
+        - cmd: "rake routes"
+    - name: "Root/git"
+      root: "~/farmnet/"
+      splits:
+        - cmd: "st"
+

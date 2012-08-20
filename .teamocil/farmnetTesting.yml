@@ -1,0 +1,43 @@
+session:
+  name: "RSpec Farmnet"
+  windows:
+    - name: "Guard"
+      root: "~/farmnet"
+      splits:
+        - cmd: "guard"
+    - name: "Models"
+      root: "~/farmnet/spec/models"
+      splits:
+        - cmd: "ls"
+    - name: "Views"
+      root: "~/farmnet/spec/views"
+      splits:
+        - cmd: "ls"
+    - name: "Controllers"
+      root: "~/farmnet/spec/controllers"
+      splits:
+        - cmd: "ls"
+    - name: "Requests"
+      root: "~/farmnet/spec/requests"
+      splits:
+        - cmd: "ls"
+    - name: "Support"
+      root: "~/farmnet/spec/support"
+      splits:
+        - cmd: "ls"
+    - name: "FactoryGirl|SpecHelper"
+      root: "~/farmnet/spec/"
+      splits:
+        - cmd: "vim factories.rb"
+        - cmd: "vim spec_helper"
+          target: "bottom-left"
+        - cmd: "ls"
+          target: "bottom-right"
+    - name: "Helpers"
+      root: "~/farmnet/spec/helpers"
+      splits:
+        - cmd: "ls"
+    - name: "Routing"
+      root: "~/farmnet/spec/helpers"
+      splits:
+        - cmd: "ls"
