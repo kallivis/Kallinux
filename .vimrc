@@ -94,3 +94,7 @@ cabbrev git Git
 
 nmap gk :Gitv --all<cr>
 nmap gK :Gitv! --all<cr>
+   
+call pathogen#infect()
+syntax on
+filetype plugin indent on
