@@ -33,6 +33,10 @@ read gitemail
 cp ~/Kallinux/.gitconfigtemplate ~/.gitconfig
 sed -i "s/var1/${gitname}/" ~/.gitconfig
 sed -i "s/var2/${gitemail}/" ~/.gitconfig
+git clone https://github.com/kallivis/teamocil.git ~/teamocil
+cd ~/teamocil 
+rake release
+rake install
 zsh
 name=`whoami`
 sudo sed -i "s/\(^${name}.*\)\/bin\/.*$/\1\/bin\/zsh/" /etc/passwd

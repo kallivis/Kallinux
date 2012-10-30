@@ -1,0 +1,37 @@
+session:
+  name: "Main Uride"
+  windows:
+    - name: "Server"
+      root: "~/uride"
+      splits:
+        - cmd: "workon uride && pp"
+    - name: "Models"
+      root: "~/uride/urideapp/"
+      splits:
+        - cmd: "vim models.py"
+    - name: "Templates"
+      root: "~/uride/urideapp/templates"
+      splits:
+        - cmd: "ls"
+    - name: "Views"
+      root: "~/uride/urideapp/"
+      splits:
+        - cmd: "vim views.py"
+    - name: "Console"
+      root: "~/uride/"
+      splits:
+        - cmd: "sudo -u postgres psql"
+    - name: "URLS"
+      root: "~/uride/uride"
+      splits:
+        - cmd: "vim urls.py"
+    - name: "Root/git"
+      root: "~/uride/"
+      splits:
+        - cmd: "st"
+    - name: "Templates2"
+      root: "~/uride//templates"
+      splits:
+        - cmd: "ls"
+
+

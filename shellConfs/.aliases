@@ -12,6 +12,7 @@ alias -- -='cd -'
 alias _='sudo'
 
 #alias g='grep -in'
+alias k="k -9"
 
 # Show history
 alias history='fc -l 1'
@@ -207,6 +208,9 @@ alias cdv='[ z`findview` != z ] && cd `findview`'
 alias cdc='[ z`findcontroller` != z ] && cd `findcontroller`'
 
 alias tc='teamocil'
-alias tch='teamocil --here'
-alias tfm='teamocil --here farmnet'
-alias tft='teamocil --here farmnetTesting'
+alias tch='tc --default --here'
+alias tfm='tc --default --here farmnet'
+alias tft='tc --default --here farmnetTesting'
+
+alias tum='tc --default --here uride'
+
