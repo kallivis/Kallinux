@@ -19,7 +19,6 @@ ln -s -f ~/Kallinux/konsole/ ~/.kde/share/apps
 ln -s -f ~/Kallinux/shellConfs/ ~/
 if [ -e ~/.rvm ]
 then
-    gem install teamocil
     ln -s -f ~/Kallinux/.teamocil ~/.teamocil
 else
   echo "rvm not installed, skipping teamocil setup"
