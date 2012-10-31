@@ -4,10 +4,8 @@ alias al='vim ~/shellConfs/.aliases ; . ~/shellConfs/.aliases'
 alias pu='pushd'
 alias po='popd'
 
-alias aget="sudo apt-get"
-alias ainstall="sudo apt-get install"
-alias sget="sudo aget"
-alias sinstall="sudo ainstall"
+alias agi='apt-get install'
+alias sagi='sudo apt-get install'
 
 # Basic directory operations
 alias ...='cd ../..'
@@ -63,11 +61,15 @@ alias hermes='hermes.colibri-software.com'
 alias alba='albatross.colibri-software.com'
 alias panther='panther.colibri-software.com'
 
-alias chyena='ssh cody@hyena.colibri-software.com'
-alias chermes='ssh cody@hermes.colibri-software.com'
-alias calba='ssh cody@albatross.colibri-software.com'
-alias cpanther='ssh cody@panther.colibri-software.com'
+alias chyena='cody@hyena.colibri-software.com'
+alias chermes='cody@hermes.colibri-software.com'
+alias calba='cody@albatross.colibri-software.com'
+alias cpanther='cody@panther.colibri-software.com'
 
+alias shyena='ssh chyena'
+alias shermes='ssh chermes'
+alias salba='ssh calbatross'
+alias spanther='ssh cpanther'
 
 alias RH='gnome-open ~/Downloads/robot_house.png'
 alias TS='gnome-open ~/Downloads/tumblr_lbt8qghn3H1qamnodo1_500.jpg'
