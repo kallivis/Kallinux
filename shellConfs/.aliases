@@ -4,6 +4,11 @@ alias al='vim ~/shellConfs/.aliases ; . ~/shellConfs/.aliases'
 alias pu='pushd'
 alias po='popd'
 
+alias aget="sudo apt-get"
+alias ainstall="sudo apt-get install"
+alias sget="sudo aget"
+alias sinstall="sudo ainstall"
+
 # Basic directory operations
 alias ...='cd ../..'
 alias -- -='cd -'
