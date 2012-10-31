@@ -17,6 +17,7 @@ ln -s -f ~/Kallinux/.zshenv ~/.zshenv
 ln -s -f ~/Kallinux/.tmux.conf ~/.tmux.conf
 ln -s -f ~/Kallinux/konsole/ ~/.kde/share/apps
 ln -s -f ~/Kallinux/shellConfs/ ~/
+ln -s -f ~/Kallinux/.vim/ ~/
 if [ -e ~/.rvm ]
 then
     ln -s -f ~/Kallinux/.teamocil ~/.teamocil
