@@ -224,3 +224,6 @@ alias tum='tc --default --here uride'
 alias tvm='tc --default --here voicematter'
 alias tvt='tc --default --here voicematterTesting'
 
+alias jca='javac *.java'
+alias jc='javac'
+
