@@ -1,0 +1,32 @@
+session:
+  name: "Main Voicematter"
+  windows:
+    - name: "Server"
+      root: "~/voicematters"
+      splits:
+        - cmd: "rr"
+    - name: "Models"
+      root: "~/voicematters/app/models"
+      splits:
+        - cmd: "ls"
+    - name: "Views"
+      root: "~/voicematters/app/views"
+      splits:
+        - cmd: "ls"
+    - name: "Controllers"
+      root: "~/voicematters/app/controllers"
+      splits:
+        - cmd: "ls"
+    - name: "Console"
+      root: "~/voicematters/"
+      splits:
+        - cmd: "rails c"
+    - name: "Config"
+      root: "~/voicematters/config"
+      splits:
+        - cmd: "rake routes"
+    - name: "Root/git"
+      root: "~/voicematters/"
+      splits:
+        - cmd: "st"
+
