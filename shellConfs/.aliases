@@ -221,3 +221,6 @@ alias tft='tc --default --here farmnetTesting'
 
 alias tum='tc --default --here uride'
 
+alias jca='javac *.java'
+alias jc='javac'
+
