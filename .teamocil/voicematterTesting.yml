@@ -1,0 +1,43 @@
+session:
+  name: "RSpec Voicematter"
+  windows:
+    - name: "Guard"
+      root: "~/voicematters"
+      splits:
+        - cmd: "guard"
+    - name: "Models"
+      root: "~/voicematters/spec/models"
+      splits:
+        - cmd: "ls"
+    - name: "Views"
+      root: "~/voicematters/spec/views"
+      splits:
+        - cmd: "ls"
+    - name: "Controllers"
+      root: "~/voicematters/spec/controllers"
+      splits:
+        - cmd: "ls"
+    - name: "Requests"
+      root: "~/voicematters/spec/requests"
+      splits:
+        - cmd: "ls"
+    - name: "Support"
+      root: "~/voicematters/spec/support"
+      splits:
+        - cmd: "ls"
+    - name: "FactoryGirl|SpecHelper"
+      root: "~/voicematters/spec/"
+      splits:
+        - cmd: "vim factories.rb"
+        - cmd: "vim spec_helper"
+          target: "bottom-left"
+        - cmd: "ls"
+          target: "bottom-right"
+    - name: "Helpers"
+      root: "~/voicematters/spec/helpers"
+      splits:
+        - cmd: "ls"
+    - name: "Routing"
+      root: "~/voicematters/spec/helpers"
+      splits:
+        - cmd: "ls"

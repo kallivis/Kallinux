@@ -221,3 +221,6 @@ alias tft='tc --default --here farmnetTesting'
 
 alias tum='tc --default --here uride'
 
+alias tvm='tc --default --here voicematter'
+alias tvt='tc --default --here voicematterTesting'
+
