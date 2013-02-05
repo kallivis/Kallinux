@@ -31,8 +31,6 @@ session:
         - cmd: "vim factories.rb"
         - cmd: "vim spec_helper"
           target: "bottom-left"
-        - cmd: "ls"
-          target: "bottom-right"
     - name: "Helpers"
       root: "~/voicematters/spec/helpers"
       splits:

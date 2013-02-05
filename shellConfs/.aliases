@@ -53,6 +53,7 @@ alias p="./manage.py runserver"
 alias pp="./manage.py runserver localhost:3030" 
 alias ppp="./manage.py runserver localhost:4044"
 alias bi="bundle install"
+alias bu="bundle update"
 alias be="bundle exec"
 
 alias colibri='colibri-software.com'
