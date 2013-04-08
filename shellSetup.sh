@@ -18,13 +18,17 @@ ln -s -f ~/Kallinux/.tmux.conf ~/.tmux.conf
 ln -s -f ~/Kallinux/konsole/ ~/.kde/share/apps
 ln -s -f ~/Kallinux/shellConfs/ ~/
 ln -s -f ~/Kallinux/.vim/ ~/
-ln -s -f ~/Kallinux/.teamocil/ ~/
 ln -s -f ~/Kallinux/.tilda/ ~/
 if [ -e ~/.rvm ]
 then
     ln -s -f ~/Kallinux/.teamocil ~/.teamocil
+    git clone https://github.com/kallivis/teamocil.git ~/teamocil
+    cd ~/teamocil 
+    rake release
+    rake install
+
 else
-  echo "rvm not installed, skipping teamocil setup"
+echo "rvm not installed, skipping teamocil setup"
 fi
 git clone https://github.com/kallivis/oh-my-zsh.git ~/.oh-my-zsh
 echo "Info for .gitconfig file"
@@ -35,10 +39,6 @@ read gitemail
 cp ~/Kallinux/.gitconfigtemplate ~/.gitconfig
 sed -i "s/var1/${gitname}/" ~/.gitconfig
 sed -i "s/var2/${gitemail}/" ~/.gitconfig
-git clone https://github.com/kallivis/teamocil.git ~/teamocil
-cd ~/teamocil 
-rake release
-rake install
 zsh
 name=`whoami`
 sudo sed -i "s/\(^${name}.*\)\/bin\/.*$/\1\/bin\/zsh/" /etc/passwd
