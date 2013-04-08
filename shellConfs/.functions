@@ -22,30 +22,30 @@ chpwd() {
 }
 
 # For changing the umask automatically
-chpwd () {
-    case $PWD in
-        $HOME/[Dd]ocuments*)
-            if [[ $(umask) -ne 077 ]]; then
-                umask 0077
-                echo -e "\033[01;32mumask: private \033[m"
-            fi;;
-        /web*|$HOME/*[Ww]eb*)
-            if [[ $(umask) -ne 072 ]]; then
-                umask 0072
-                echo -e "\033[01;33mumask: other readable \033[m"
-            fi;;
-        /nothing)
-            if [[ $(umask) -ne 002 ]]; then
-                umask 0002
-                echo -e "\033[01;35mumask: group writable \033[m"
-            fi;;
-        *)
-            if [[ $(umask) -ne 022 ]]; then
-                umask 0022
-                echo -e "\033[01;31mumask: world readable \033[m"
-            fi;;
-    esac
-}
+#   chpwd () {
+#       case $PWD in
+#           $HOME/[Dd]ocuments*)
+#               if [[ $(umask) -ne 077 ]]; then
+#                   umask 0077
+#                   echo -e "\033[01;32mumask: private \033[m"
+#               fi;;
+#           /web*|$HOME/*[Ww]eb*)
+#               if [[ $(umask) -ne 072 ]]; then
+#                   umask 0072
+#                   echo -e "\033[01;33mumask: other readable \033[m"
+#               fi;;
+#           /nothing)
+#               if [[ $(umask) -ne 002 ]]; then
+#                   umask 0002
+#                   echo -e "\033[01;35mumask: group writable \033[m"
+#               fi;;
+#           *)
+#               if [[ $(umask) -ne 022 ]]; then
+#                   umask 0022
+#                   echo -e "\033[01;31mumask: world readable \033[m"
+#               fi;;
+#       esac
+#   }
 cd . &> /dev/null
 
 # CD into random directory in PWD

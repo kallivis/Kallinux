@@ -1,5 +1,7 @@
 #! /bin/sh
 alias al='vim ~/shellConfs/.aliases ; . ~/shellConfs/.aliases'
+alias zz='source ~/.zshrc'
+alias bb='source ~/.bashrc'
 # Push and pop directories on directory stack
 alias pu='pushd'
 alias po='popd'
