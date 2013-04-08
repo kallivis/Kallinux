@@ -16,12 +16,12 @@ f() {
 chpwd() {
     [[ -t 1 ]] || return
     case $TERM in
-	sun-cmd) print -Pn "\e]l%~\e\\";;
-        *xterm*|rxvt|\(dt|k|E\)term) print -Pn "\e]2;%m:%~\a";;
-    esac
+        sun-cmd) print -Pn "\e]l%~\e\\";;
+    *xterm*|rxvt|\(dt|k|E\)term) print -Pn "\e]2;%m:%~\a";;
+esac
 }
 
-# For changing the umask automatically
+    # For changing the umask automatically
 #   chpwd () {
 #       case $PWD in
 #           $HOME/[Dd]ocuments*)
@@ -50,14 +50,14 @@ cd . &> /dev/null
 
 # CD into random directory in PWD
 cdrand () {
-	all=( *(/) )
-	rand=$(( 1 + $RANDOM % $#all ))
-	cd $all[$rand]
+    all=( *(/) )
+    rand=$(( 1 + $RANDOM % $#all ))
+    cd $all[$rand]
 }
 
 # Rotate a jpeg, losslessly
 jrotate-r () {
-    for i in $*; do
-	exiftran -9 -b -i $i
-    done
+for i in $*; do
+    exiftran -9 -b -i $i
+done
 }
