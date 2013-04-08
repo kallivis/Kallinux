@@ -34,8 +34,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export myShell='/bin/zsh'
 source ${HOME}/shellConfs/.all
-export WORKON_HOME=$HOME/.virtualenvs 
+#export WORKON_HOME=$HOME/.virtualenvs 
 export PROJECT_HOME=$HOME/Devel
-source /usr/local/bin/virtualenvwrapper.sh
+#source /usr/local/bin/virtualenvwrapper.sh
 # Customize to your needs...
 
