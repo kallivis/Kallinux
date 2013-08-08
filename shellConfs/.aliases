@@ -230,3 +230,4 @@ alias tvt='tc --default --here voicematterTesting'
 alias jca='javac *.java'
 alias jc='javac'
 
+alias xo='xdg-open' 
