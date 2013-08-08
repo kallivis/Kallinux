@@ -36,6 +36,13 @@ export myShell='/bin/zsh'
 source ${HOME}/shellConfs/.all
 #export WORKON_HOME=$HOME/.virtualenvs 
 export PROJECT_HOME=$HOME/Devel
-#source /usr/local/bin/virtualenvwrapper.sh
+
+export PATH=$PATH:/usr/local/bin/.
+export ANT_HOME=/usr/local/apache-ant-1.9.2
+export LD_LIBRARY_PATH=/usr/local/lib
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
+
+
+# source /usr/local/bin/virtualenvwrapper.sh
 # Customize to your needs...
 
