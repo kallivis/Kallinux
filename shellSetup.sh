@@ -19,14 +19,15 @@ ln -s -f ~/Kallinux/konsole/ ~/.kde/share/apps
 ln -s -f ~/Kallinux/shellConfs/ ~/shellConfs
 ln -s -f ~/Kallinux/.vim/ ~/.vim
 ln -s -f ~/Kallinux/.tilda/ ~/.tilda
-if [ -e ~/.rvm ]
+
+if [[ -x `which rake` ]]
 then
     ln -s -f ~/Kallinux/.teamocil ~/.teamocil
     git clone https://github.com/kallivis/teamocil.git ~/teamocil
     cd ~/teamocil 
     rake release
     rake install
-
+    cd ~/Kallinux/
 else
 echo "rvm not installed, skipping teamocil setup"
 fi

@@ -1,10 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/cody/nslc_monitor_webapp/config/initializers'
-let g:netrw_dirhist_2='/home/cody/nslc_monitor_webapp/app/views/products'
-let g:netrw_dirhist_3='/home/cody/farmnet/app/controllers'
-let g:netrw_dirhist_4='/home/cody/nslc_monitor_webapp/app/views/layouts'
-let g:netrw_dirhist_5='/home/cody/calendar/config/deploy'
-let g:netrw_dirhist_6='/Users/stomp/shellConfs'
-let g:netrw_dirhist_7='/Users/stomp/.oh-my-zsh'
-let g:netrw_dirhist_8='/home/cody/Downloads/sphinx4-1.0beta6-src/sphinx4-1.0beta6/src/sphinx4/edu/cmu/sphinx/linguist/lextree'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/cody/Kallinux/shellConfs'
