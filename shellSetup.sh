@@ -15,22 +15,10 @@ ln -s -f ~/Kallinux/.vimrc ~/.vimrc
 ln -s -f ~/Kallinux/.zshrc ~/.zshrc
 ln -s -f ~/Kallinux/.zshenv ~/.zshenv
 ln -s -f ~/Kallinux/.tmux.conf ~/.tmux.conf
-ln -s -f ~/Kallinux/konsole/ ~/.kde/share/apps
 ln -s -f ~/Kallinux/shellConfs/ ~/shellConfs
 ln -s -f ~/Kallinux/.vim/ ~/.vim
 ln -s -f ~/Kallinux/.tilda/ ~/.tilda
 
-if [[ -x `which rake` ]]
-then
-    ln -s -f ~/Kallinux/.teamocil ~/.teamocil
-    git clone https://github.com/kallivis/teamocil.git ~/teamocil
-    cd ~/teamocil 
-    rake release
-    rake install
-    cd ~/Kallinux/
-else
-echo "rvm not installed, skipping teamocil setup"
-fi
 git clone https://github.com/kallivis/oh-my-zsh.git ~/.oh-my-zsh
 echo "Info for .gitconfig file"
 echo "Name: "
