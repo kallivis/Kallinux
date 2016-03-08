@@ -1,1 +1,0 @@
-/home/parallels/Kallinux/.vim/
