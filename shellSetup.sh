@@ -20,6 +20,7 @@ ln -s -f ~/Kallinux/.vim/ ~/.vim
 ln -s -f ~/Kallinux/.tilda/ ~/.tilda
 
 git clone https://github.com/kallivis/oh-my-zsh.git ~/.oh-my-zsh
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 echo "Info for .gitconfig file"
 echo "Name: "
 read gitname
