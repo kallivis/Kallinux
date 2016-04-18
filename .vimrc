@@ -1,9 +1,9 @@
 let mapleader=","
 
 set expandtab
-set tabstop=4
+set tabstop=2
 set smarttab
-set shiftwidth=4
+set shiftwidth=2
 set backup
 set wildmode=list:longest,full
 
@@ -79,8 +79,9 @@ let g:EclimBrowser = 'firefox'
 filetype plugin indent on
 syntax on
 
+"fix eventually
 com W w
-com Q q
+"com Q q
 set ruler
 
 runtime macros/matchit.vim
@@ -96,4 +97,5 @@ nmap gK :Gitv! --all<cr>
    
 call pathogen#infect()
 syntax on
+:hi Visual term=reverse cterm=reverse
 filetype plugin indent on

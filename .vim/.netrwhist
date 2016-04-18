@@ -1,10 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/home/cody/locomotive_plugin_gems/rxs_plugin/lib/rxs/plugin'
-let g:netrw_dirhist_2='/home/cody/locomotive_plugin_gems/rxs_plugin/app/cells/rxs/order'
-let g:netrw_dirhist_3='/home/cody/locomotive_plugin_gems/rxs_plugin/lib/rxs/plugin'
-let g:netrw_dirhist_4='/var/www/html'
-let g:netrw_dirhist_5='/home/cody/locomotive_plugin_gems/rxs_plugin/lib/rxs/plugin'
-let g:netrw_dirhist_6='/home/cody/locomotive_plugin_gems/rxs_plugin/app/cells/rxs/download_form'
-let g:netrw_dirhist_7='/home/cody/locomotive_plugin_gems/rxs_plugin/lib/rxs/plugin'
-let g:netrw_dirhist_8='/home/cody/colibri-rxs-5/app/views/rxs_online_order'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/cody/locomotive_plugin_gems/identity_plugin/app/cells/identity_plugin/identities'
+let g:netrw_dirhist_2='/home/cody/locomotive_plugin_gems/identity_plugin/lib/identity_plugin'
+let g:netrw_dirhist_3='/home/cody/locomotive_plugin_gems/identity_plugin/app/views/identity_plugin/identities'
+let g:netrw_dirhist_4='/home/cody/locomotive_plugin_gems/identity_plugin/lib/identity_plugin'
