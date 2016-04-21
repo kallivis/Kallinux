@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/cody/locomotive_plugin_gems/identity_plugin/app/cells/identity_plugin/identities'
-let g:netrw_dirhist_2='/home/cody/locomotive_plugin_gems/identity_plugin/lib/identity_plugin'
-let g:netrw_dirhist_3='/home/cody/locomotive_plugin_gems/identity_plugin/app/views/identity_plugin/identities'
-let g:netrw_dirhist_4='/home/cody/locomotive_plugin_gems/identity_plugin/lib/identity_plugin'
