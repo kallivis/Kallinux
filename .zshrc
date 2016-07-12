@@ -21,7 +21,7 @@ ZSH_THEME="cody"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+ DISABLE_AUTO_TITLE="true"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
@@ -36,6 +36,8 @@ export myShell='/bin/zsh'
 source ${HOME}/shellConfs/.all
 #export WORKON_HOME=$HOME/.virtualenvs 
 export PROJECT_HOME=$HOME/Devel
+unsetopt auto_name_dirs
+
 
 export PATH=$PATH:/usr/local/bin/.
 export ANT_HOME=/usr/local/apache-ant-1.9.2
@@ -46,3 +48,5 @@ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig
 # source /usr/local/bin/virtualenvwrapper.sh
 # Customize to your needs...
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
