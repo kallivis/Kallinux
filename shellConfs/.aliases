@@ -13,6 +13,9 @@ alias sagi='sudo apt-get install'
 alias ...='cd ../..'
 alias -- -='cd -'
 
+#Grep
+alias gir='grep -ir'
+
 # Super user
 alias _='sudo'
 
@@ -63,11 +66,21 @@ alias hyena='hyena.colibri-software.com'
 alias hermes='hermes.colibri-software.com'
 alias alba='albatross.colibri-software.com'
 alias panther='panther.colibri-software.com'
+alias harrier='harrier.colibri-software.com'
+alias griffin='griffin.colibri-software.com'
+alias cheetah='cheetah.colibri-software.com'
+alias owl='owl.colibri-software.com'
+
 
 alias -g chyena='cody@hyena.colibri-software.com'
 alias -g chermes='cody@hermes.colibri-software.com'
 alias -g calba='cody@albatross.colibri-software.com'
 alias -g cpanther='cody@panther.colibri-software.com'
+alias -g charrier='cody@harrier.colibri-software.com'
+alias -g cgriffin='cody@griffin.colibri-software.com'
+alias -g ccheetah='cody@cheetah.colibri-software.com'
+alias -g cowl='cody@owl.colibri-software.com'
+alias -g csphinx='cody@sphinx.colibri-software.com'
 
 alias  shyena='ssh chyena'
 alias  shermes='ssh chermes'
