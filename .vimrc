@@ -94,6 +94,9 @@ cabbrev git Git
 
 nmap gk :Gitv --all<cr>
 nmap gK :Gitv! --all<cr>
+
+set list
+set listchars=tab:>-,trail:~
    
 call pathogen#infect()
 syntax on
