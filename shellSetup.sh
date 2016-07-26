@@ -18,6 +18,7 @@ ln -s -f ~/Kallinux/.tmux.conf ~/.tmux.conf
 ln -s -f ~/Kallinux/shellConfs/ ~/shellConfs
 ln -s -f ~/Kallinux/.vim/ ~/.vim
 ln -s -f ~/Kallinux/.tilda/ ~/.tilda
+ln -s -f ~/Kallinux/.tmux/ ~/.tmux
 
 git clone https://github.com/kallivis/oh-my-zsh.git ~/.oh-my-zsh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
