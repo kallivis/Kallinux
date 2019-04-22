@@ -155,6 +155,7 @@ f() {
 # git stuff
 alias ci='git commit'
 alias cim='git commit -m'
+alias cims='git commit -S -m'
 alias co='git checkout'
 alias st='git status'
 alias rb='git rebase'

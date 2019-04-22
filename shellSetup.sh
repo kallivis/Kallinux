@@ -2,13 +2,10 @@
 mkdir -p ~/tmp
 mkdir -p ~/tmp/.vim/
 mkdir -p ~/.git
-mkdir -p ~/.kde/share/apps
-#rm -rf ~/.kde/share/apps/konsole/
 ln -s -f ~/Kallinux/.bash_aliases ~/.bash_aliases
 ln -s -f ~/Kallinux/.bash_logout ~/.bash_logout
 ln -s -f ~/Kallinux/.bash_profile ~/.bash_profile
 ln -s -f ~/Kallinux/.bashrc ~/.bashrc
-ln -s -f ~/Kallinux/.emacs ~/.emacs
 ln -s -f ~/Kallinux/.gitk ~/.gitk
 ln -s -f ~/Kallinux/.gvimrc ~/.gvimrc
 ln -s -f ~/Kallinux/.vimrc ~/.vimrc
@@ -17,11 +14,9 @@ ln -s -f ~/Kallinux/.zshenv ~/.zshenv
 ln -s -f ~/Kallinux/.tmux.conf ~/.tmux.conf
 ln -s -f ~/Kallinux/shellConfs/ ~/shellConfs
 ln -s -f ~/Kallinux/.vim/ ~/.vim
-ln -s -f ~/Kallinux/.tilda/ ~/.tilda
 ln -s -f ~/Kallinux/.tmux/ ~/.tmux
 
-git clone https://github.com/kallivis/oh-my-zsh.git ~/.oh-my-zsh
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 echo "Info for .gitconfig file"
 echo "Name: "
 read gitname
